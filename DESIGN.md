@@ -1,51 +1,47 @@
 # DESIGN.MD
 
-## Project: Personal Brand Website (Sebastian Hałaczkiewicz)
+## Brand & Style
+The brand identity is built for a professional system and infrastructure engineer, focusing on corporate reliability, structure, and high accessibility.
 
-This document describes the structure and design principles of the personal website based on **Tailwind CSS**.
+The design style follows an **Enterprise Light Minimalism** philosophy. It rejects dark "hacker-style" setups in favor of a clean, bright, corporate dashboard look. It utilizes crisp white and light-gray content blocks, strict vertical rhythms, and sharp blue accents to convey competence, organization, and alignment with modern enterprise cloud ecosystems.
 
-### 1. Project Goal
-The website serves as a modern, responsive professional portfolio (Personal Brand) for a System Infrastructure Administrator. Its primary goal is to showcase professional experience, technical expertise, and provide a clear contact point.
+## Colors
+The palette is a high-fidelity light mode optimized for corporate readability and professional presentation.
 
-### 2. Technical Architecture
-* **CSS Framework**: Tailwind CSS (via CDN).
-* **Typography**: 
-    * `Inter` (primary body font).
-    * `Geist` (specialized UI elements).
-* **Interactivity**: Vanilla JavaScript handling:
-    * Internationalization (EN/PL switching).
-    * Secure e-mail reveal mechanism (with clipboard integration).
-    * Smooth scrolling.
+| Token Name | Hex Code | Tailwind Equivalent | Usage |
+| :--- | :--- | :--- | :--- |
+| **Background** | `#f8fafc` | `slate-50` | Main canvas background. |
+| **On-Background** | `#0f172a` | `slate-900` | Headings and high-contrast text. |
+| **Primary Accent**| `#3b82f6` | `blue-600` | Hyperlinks, buttons, and active nodes. |
+| **Primary Hover** | `#2563eb` | `blue-700` | Button interactive hover states. |
+| **Secondary Text**| `#475569` | `slate-600` | Subtitles, dates, and descriptions. |
+| **Muted Text** | `#94a3b8` | `slate-400` | Structural lines and passive icons. |
 
-### 3. Page Structure
+## Typography
+The typography system uses a dual-font approach to balance editorial structure with technical precision.
 
-| Section | Component | Description |
-| :--- | :--- | :--- |
-| **Navigation** | Sticky Header | Backdrop-blur effect, language toggle, and internal links. |
-| **Hero** | Header Section | Main title, professional tag, and primary Call-to-Action (CTA) buttons. |
-| **Expertise** | Grid Layout | 4-column layout (responsive) detailing key MS ecosystem skills. |
-| **Experience** | Vertical Timeline | Alternating cards showcasing professional path from current to past. |
-| **Contact** | Feature Block | Dedicated section with a secure e-mail reveal and LinkedIn link. |
+- **Headlines & Body**: **Inter** (400, 600, 700). Ensures perfect legibility from 48px hero text down to standard paragraphs.
+- **UI Labels & Tags**: **Geist** (400, 500). Used for technical metadata, button labels, and skill tags.
 
-### 4. Internationalization (i18n)
-The site supports two languages via a `translations` object:
-* The `setLanguage(lang)` function dynamically updates `innerHTML` for elements marked with the `data-t` attribute.
-* Default language: **English**.
+## Layout & Spacing
+- **Containers**: Central content is bound within `max-w-5xl` (1024px) for sections, and `max-w-3xl` (768px) for the hero.
+- **Grid Layout**: 4-column expertise grid (`lg:grid-cols-4`) on desktops, adapting to single-column on mobile.
+- **Timeline**: Centered vertical path (`left-50%`) with mobile override to left-aligned (`left-[24px]`).
 
-### 5. E-mail Interaction Logic
-To protect the e-mail address from scraping, we utilize a tactical security component:
+## Elevation & Depth
+- **Surface Tiers**: Content blocks use white backgrounds with light borders (`border-slate-100`).
+- **Interactive State**: Expertise cards utilize a `hover:translate-y-[-4px]` transition over `0.2s` to indicate clickability.
 
-1. **Trigger**: Clicking the button updates the DOM with `contact@halaczkiewicz.it`.
-2. **Copy**: Native `navigator.clipboard` integration ensures quick UX.
-3. **Feedback**: The button label provides real-time status updates:
-   * EN: "(Copied!)"
-   * PL: "(Skopiowano!)"
+## Components & Interaction
+### Buttons
+- **Primary**: Solid corporate blue background with high-contrast white text.
+- **Secondary (LinkedIn)**: White surface with thin border, transitioning to blue outline on hover.
 
-### 6. Design System & Constraints
+### Secure Email Reveal (code_3.html)
+A tactical JavaScript security component to prevent scraping:
+1. **Trigger**: Replaces `data-t` placeholder with `contact@halaczkiewicz.it`.
+2. **Clipboard**: Native `navigator.clipboard` integration.
+3. **Feedback**: Dynamic text change for 2 seconds (e.g., "Copied!" / "Skopiowano!").
 
-| Category | Definition |
-| :--- | :--- |
-| **Primary Color** | `blue-600` (corporate blue) |
-| **Background** | `slate-50` / `white` (clean enterprise feel) |
-| **Spacing** | 1.25 line height for optimal readability |
-| **Responsiveness** | Mobile-first with breakpoint adjustments for timeline nodes |
+### Internationalization (i18n)
+The site implements a `translations` object allowing dynamic switching between English and Polish without page refreshes, targeting `data-t` attributes.
