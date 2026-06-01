@@ -1,47 +1,71 @@
-# DESIGN.MD
+# DESIGN.MD: Enterprise Light Minimalist System
 
-## Brand & Style
-The brand identity is built for a professional system and infrastructure engineer, focusing on corporate reliability, structure, and high accessibility.
+## 1. Overview & Philosophy
+The **Enterprise Light Minimalist** design system provides a professional, highly readable framework for technical portfolios. It moves away from dark-mode "developer aesthetic" toward a high-trust, corporate-ready interface.
 
-The design style follows an **Enterprise Light Minimalism** philosophy. It rejects dark "hacker-style" setups in favor of a clean, bright, corporate dashboard look. It utilizes crisp white and light-gray content blocks, strict vertical rhythms, and sharp blue accents to convey competence, organization, and alignment with modern enterprise cloud ecosystems.
+- **Design Tone**: Reliable, structured, precise, clean.
+- **Primary Use Case**: System Administration, Cloud Infrastructure, Engineering Portfolios.
 
-## Colors
-The palette is a high-fidelity light mode optimized for corporate readability and professional presentation.
+## 2. Color Palette & Tokens
+Used across the `tailwind.config` or inline styling:
 
-| Token Name | Hex Code | Tailwind Equivalent | Usage |
+| Token | Hex | Tailwind | Role |
 | :--- | :--- | :--- | :--- |
-| **Background** | `#f8fafc` | `slate-50` | Main canvas background. |
-| **On-Background** | `#0f172a` | `slate-900` | Headings and high-contrast text. |
-| **Primary Accent**| `#3b82f6` | `blue-600` | Hyperlinks, buttons, and active nodes. |
-| **Primary Hover** | `#2563eb` | `blue-700` | Button interactive hover states. |
-| **Secondary Text**| `#475569` | `slate-600` | Subtitles, dates, and descriptions. |
-| **Muted Text** | `#94a3b8` | `slate-400` | Structural lines and passive icons. |
+| **Surface** | `#f8fafc` | `slate-50` | Main application background. |
+| **Canvas** | `#ffffff` | `white` | Content container background. |
+| **Text Primary** | `#0f172a` | `slate-900` | Headings and primary data. |
+| **Text Secondary**| `#475569` | `slate-600` | Paragraphs and supporting text. |
+| **Action Blue** | `#3b82f6` | `blue-600` | Primary buttons, links, accents. |
+| **Action Active** | `#2563eb` | `blue-700` | Hover/Interaction states. |
+| **Border** | `#f1f5f9` | `slate-100` | Structural dividers. |
 
-## Typography
-The typography system uses a dual-font approach to balance editorial structure with technical precision.
+## 3. Typography Strategy
+- **Base Font**: `Inter` (sans-serif). Geometric, high legibility.
+- **Technical Font**: `Geist` (sans-serif). Modern, monospaced-feel for metrics and labels.
 
-- **Headlines & Body**: **Inter** (400, 600, 700). Ensures perfect legibility from 48px hero text down to standard paragraphs.
-- **UI Labels & Tags**: **Geist** (400, 500). Used for technical metadata, button labels, and skill tags.
+| Element | Font | Size | Weight | Line Height |
+| :--- | :--- | :--- | :--- | :--- |
+| **Display XL** | Inter | 48px | 700 | 1.2 |
+| **Headline MD** | Inter | 24px | 600 | 32px |
+| **Body LG** | Inter | 18px | 400 | 28px |
+| **Label MD** | Geist | 14px | 500 | 20px |
 
-## Layout & Spacing
-- **Containers**: Central content is bound within `max-w-5xl` (1024px) for sections, and `max-w-3xl` (768px) for the hero.
-- **Grid Layout**: 4-column expertise grid (`lg:grid-cols-4`) on desktops, adapting to single-column on mobile.
-- **Timeline**: Centered vertical path (`left-50%`) with mobile override to left-aligned (`left-[24px]`).
+## 4. Component Library Architecture
 
-## Elevation & Depth
-- **Surface Tiers**: Content blocks use white backgrounds with light borders (`border-slate-100`).
-- **Interactive State**: Expertise cards utilize a `hover:translate-y-[-4px]` transition over `0.2s` to indicate clickability.
-
-## Components & Interaction
 ### Buttons
-- **Primary**: Solid corporate blue background with high-contrast white text.
-- **Secondary (LinkedIn)**: White surface with thin border, transitioning to blue outline on hover.
+- **Primary**: `bg-blue-600` + `text-white` + `rounded-lg` + `shadow-lg shadow-blue-200`.
+- **Secondary**: `bg-white` + `border-slate-200` + `hover:border-blue-600`.
 
-### Secure Email Reveal (code_3.html)
-A tactical JavaScript security component to prevent scraping:
-1. **Trigger**: Replaces `data-t` placeholder with `contact@halaczkiewicz.it`.
-2. **Clipboard**: Native `navigator.clipboard` integration.
-3. **Feedback**: Dynamic text change for 2 seconds (e.g., "Copied!" / "Skopiowano!").
+### Expertise Cards
+- **Structure**: Container `bg-slate-50` + border `slate-100`.
+- **Animation**: `transition-transform duration-200 hover:translate-y-[-4px]`.
+
+### Timeline System (code_3.html)
+- **Path**: Vertical line `left-50%` (desktop) to `left-24px` (mobile).
+- **Node**: 12px dot with 2px border, `bg-blue-600`.
+- **Content**: Flex-based row alternation using `md:flex-row-reverse`.
+
+## 5. Global Technical Patterns
 
 ### Internationalization (i18n)
-The site implements a `translations` object allowing dynamic switching between English and Polish without page refreshes, targeting `data-t` attributes.
+To support multi-language, store all strings in a centralized `translations` JS object.
+- **Implementation**: Every localizable element must carry a `data-t="key"` attribute.
+- **Function**: `setLanguage(lang)` performs `element.innerHTML = translations[lang][key]`.
+
+### Secure Contact (Anti-Scraping)
+To prevent bot-scraping of your email:
+1. **Masking**: Use a placeholder button ("Reveal Email").
+2. **Dynamic Injection**: On click, inject `contact@halaczkiewicz.it`.
+3. **Clipboard**: Use `navigator.clipboard` with an `isSecureContext` check.
+4. **UX Loop**: Temporarily show "Copied!" and revert to the email address after 2s.
+
+## 6. Layout Scaling
+- **Container**: Use `max-w-5xl` for main sections, `max-w-3xl` for prose/hero.
+- **Spacing**: Use standard Tailwind spacing (sm: 8px, md: 16px, lg: 32px, xl: 48px).
+- **Mobile**: Use `flex-col` on all major section containers, snapping to `flex-row` at `md` (768px) breakpoint.
+
+## 7. Future Deployment Checklist
+1. **Repository**: Ensure `tailwind.config.js` or CDN script is linked.
+2. **Metadata**: Update `<title>` and `<meta name="viewport">`.
+3. **Assets**: Verify font imports from Google Fonts.
+4. **Security**: Ensure all external links have `rel="noopener noreferrer"`.
