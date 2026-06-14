@@ -1,0 +1,188 @@
+<script>
+const translations = {
+    en: {
+        "nav-expertise": "Expertise",
+        "nav-experience": "Experience",
+        "nav-contact": "Contact",
+        "hero-tag": "Platform Operations & Infrastructure Engineer",
+        "hero-desc": 'Platform Operations & Infrastructure Engineer specializing in <span class="font-bold text-slate-900">Azure, Datadog, Windows Server, Active Directory, VMware</span> and enterprise-grade reliability. Experienced in cloud operations, monitoring, incident management and OT/industrial environments.',
+        "hero-email-btn": "Click to reveal email",
+        "expertise-title": "Cloud, Infrastructure & Microsoft Ecosystem",
+        "exp-card1-title": "Windows Server",
+        "exp-card1-desc": "Deep expertise in OS maintenance, security patching, role-based configuration and enterprise infrastructure support.",
+        "exp-card2-title": "Active Directory",
+        "exp-card2-desc": "IAM, Group Policy management, Domain Controller health monitoring and secure access control in enterprise environments.",
+        "exp-card3-title": "Azure Cloud & Hybrid",
+        "exp-card3-desc": "Management of Azure resources, virtual networks, cloud identities and hybrid infrastructure for enterprise environments.",
+        "exp-card4-title": "Platform & Operations",
+        "exp-card4-desc": "Platform operations monitoring, PowerShell automation, incident and change management aligned with SRE practices.",
+        "path-title": "Professional Path",
+        "path-subtitle": "A journey through cloud operations, platform reliability and enterprise infrastructure.",
+        "role-current": "Current Role",
+        "job1-title": "Customer Service Support Engineer",
+        "job1-meta": "Etteplan (for Fortum) • 2026 — Today",
+        "job1-desc": "Focus on high availability infrastructure, Active Directory and Azure cloud path. Integrated environment management with Datadog monitoring to ensure maximum service uptime and performance.",
+        "job1-date": "2026 — Today",
+        "job2-title": "L2 Customer Support Agent",
+        "job2-meta": "GR8 Tech • 2024 — 2026",
+        "job2-desc": "Built the L2 support team from scratch, establishing foundational operational policies and comprehensive technical documentation. Responsible for high-level ticket analysis and creating Jira dashboards and filters to optimize team workflow.",
+        "job3-title": "2nd Line Support Analyst/Engineer",
+        "job3-meta": "Atos Poland (for Ministry of Justice UK) • 2022 — 2023",
+        "job3-desc": "Specialized in Active Directory administration, complex NTFS permission management and Microsoft Intune device enrollment. Managed user accounts, mailboxes via Exchange and maintained Office 365 cloud environments.",
+        "job4-title": "Banking Systems Administrator",
+        "job4-meta": "Credit Agricole Bank Polska S.A. • 2021 — 2022",
+        "job4-desc": "Management of MS SQL Servers and administration of Pivotal CRM application. Supported debt collection processes, deployed new software versions and provided advanced troubleshooting for Pivotal application issues.",
+        "job5-title": "IT Specialist / System Administrator",
+        "job5-meta": "Nestle Polska / Nestle Purina • 2016 — 2021",
+        "job5-desc": "End-to-end infrastructure management: Windows Servers (2008R2/2016), VMware (ESXi, 3PAR storage), MS SQL databases and Cisco network environments. Also managed CCTV systems (Analog/IP) for enterprise security.",
+        "job6-title": "Systems Administrator",
+        "job6-meta": "Sky IT (for Dongseo Display & Pantos Logistics) • 2015 — 2016",
+        "job6-desc": "Infrastructure and network administration, including administration of computer networks, workstations and peripherals. Managed network resources and supervised CCTV systems for logistics operations.",
+        "job7-title": "Hardware & Systems Diagnostics Specialist",
+        "job7-meta": "PHU TELDOM • 2013 — 2015",
+        "job7-desc": "Expert diagnosis and repair of PC/laptop hardware and software systems. Conducted high-precision testing and maintenance of electronic components to ensure optimal performance and longevity.",
+        "contact-title": "Connect with me",
+        "contact-desc": "Available for professional discussions on Microsoft Infrastructure, Platform Operations and enterprise architecture.",
+        "contact-linkedin": "LinkedIn Networking",
+        "footer-copy": "© 2026 Sebastian Hałaczkiewicz",
+        "copied": " (Copied!)",
+        "skills-title": "Skills Matrix",
+        "skills-col-skill": "Skill",
+        "skills-col-level": "Level",
+        "skills-col-exp": "Experience",
+        "level-expert": "Expert",
+        "level-advanced": "Advanced",
+        "level-intermediate": "Intermediate",
+        "years": "years"
+    },
+
+    pl: {
+        "nav-expertise": "Ekspertyza",
+        "nav-experience": "Doświadczenie",
+        "nav-contact": "Kontakt",
+        "hero-tag": "Inżynier Operacji Platformy / Infrastruktury",
+        "hero-desc": 'Inżynier Operacji Platformy i Infrastruktury specjalizujący się w <span class="font-bold text-slate-900">Azure, Datadog, Windows Server, Active Directory, VMware</span> oraz niezawodności infrastruktury enterprise. Doświadczony w operacjach chmurowych, monitoringu, zarządzaniu incydentami i środowiskach OT/industrial.',
+        "hero-email-btn": "Kliknij, aby odkryć e-mail",
+        "expertise-title": "Chmura, Infrastruktura i Ekosystem Microsoft",
+        "exp-card1-title": "Windows Server",
+        "exp-card1-desc": "Głęboka wiedza w zakresie utrzymania systemów operacyjnych, aktualizacji bezpieczeństwa, konfiguracji opartej na rolach i wsparcia infrastruktury enterprise.",
+        "exp-card2-title": "Active Directory",
+        "exp-card2-desc": "Zarządzanie IAM, Group Policy oraz monitorowanie kondycji kontrolerów domeny i kontroli dostępu w środowiskach enterprise.",
+        "exp-card3-title": "Azure Cloud i Hybryda",
+        "exp-card3-desc": "Zarządzanie zasobami Azure, sieciami wirtualnymi, tożsamościami chmurowymi i infrastrukturą hybrydową w środowiskach enterprise.",
+        "exp-card4-title": "Operacje Platformy i Infrastruktury",
+        "exp-card4-desc": "Monitorowanie operacji platformowych, automatyzacja PowerShell oraz zarządzanie incydentami i zmianami zgodnie z praktykami SRE.",
+        "path-title": "Ścieżka Zawodowa",
+        "path-subtitle": "Podróż przez operacje chmurowe, niezawodność platform i infrastrukturę enterprise.",
+        "role-current": "Obecne Stanowisko",
+        "job1-title": "Customer Service Support Engineer",
+        "job1-meta": "Etteplan (dla Fortum) • 2026 — Obecnie",
+        "job1-desc": "Koncentracja na infrastrukturze wysokiej dostępności, Active Directory i ścieżce chmurowej Azure. Zintegrowane zarządzanie środowiskiem z monitorowaniem Datadog w celu zapewnienia maksymalnego czasu działania usług i wydajności.",
+        "job1-date": "2026 — Obecnie",
+        "job2-title": "L2 Customer Support Agent",
+        "job2-meta": "GR8 Tech • 2024 — 2026",
+        "job2-desc": "Zbudowanie zespołu wsparcia L2 od podstaw, ustanowienie fundamentalnych zasad operacyjnych i kompleksowej dokumentacji technicznej. Odpowiedzialność za analizę zgłoszeń wysokiego poziomu oraz tworzenie dashboardów i filtrów Jira w celu optymalizacji przepływu pracy zespołu.",
+        "job3-title": "2nd Line Support Analyst/Engineer",
+        "job3-meta": "Atos Poland (dla Ministerstwa Sprawiedliwości UK) • 2022 — 2023",
+        "job3-desc": "Specjalizacja w administracji Active Directory, złożonym zarządzaniu uprawnieniami NTFS oraz rejestracji urządzeń Microsoft Intune. Zarządzanie kontami użytkowników, skrzynkami pocztowymi Exchange i utrzymanie środowisk chmurowych Office 365.",
+        "job4-title": "Banking Systems Administrator",
+        "job4-meta": "Credit Agricole Bank Polska S.A. • 2021 — 2022",
+        "job4-desc": "Zarządzanie serwerami MS SQL i administracja aplikacją Pivotal CRM. Wsparcie procesów windykacyjnych, wdrażanie nowych wersji oprogramowania oraz zaawansowane rozwiązywanie problemów z aplikacją Pivotal.",
+        "job5-title": "IT Specialist / System Administrator",
+        "job5-meta": "Nestle Polska / Nestle Purina • 2016 — 2021",
+        "job5-desc": "Kompleksowe zarządzanie infrastrukturą: Windows Server (2008R2/2016), VMware (ESXi, macierze 3PAR), bazy danych MS SQL i środowiska sieciowe Cisco. Zarządzanie systemami CCTV (analogowymi/IP) dla bezpieczeństwa przedsiębiorstwa.",
+        "job6-title": "Systems Administrator",
+        "job6-meta": "Sky IT (dla Dongseo Display i Pantos Logistics) • 2015 — 2016",
+        "job6-desc": "Administracja infrastrukturą i siecią, w tym sieciami komputerowymi, stacjami roboczymi i urządzeniami peryferyjnymi. Zarządzanie zasobami sieciowymi i nadzór nad systemami CCTV dla operacji logistycznych.",
+        "job7-title": "Hardware & Systems Diagnostics Specialist",
+        "job7-meta": "PHU TELDOM • 2013 — 2015",
+        "job7-desc": "Ekspercka diagnostyka i naprawa sprzętu komputerowego oraz systemów oprogramowania. Przeprowadzanie precyzyjnych testów i konserwacja komponentów elektronicznych w celu zapewnienia optymalnej wydajności.",
+        "contact-title": "Skontaktuj się ze mną",
+        "contact-desc": "Dostępny do profesjonalnych dyskusji na temat infrastruktury Microsoft, operacji platformowych i architektury przedsiębiorstwa.",
+        "contact-linkedin": "Networking LinkedIn",
+        "footer-copy": "© 2026 Sebastian Hałaczkiewicz",
+        "copied": " (Skopiowano!)",
+        "skills-title": "Macierz Umiejętności",
+        "skills-col-skill": "Umiejętność",
+        "skills-col-level": "Poziom",
+        "skills-col-exp": "Doświadczenie",
+        "level-expert": "Ekspert",
+        "level-advanced": "Zaawansowany",
+        "level-intermediate": "Średniozaawansowany",
+        "years": "lat"
+    }
+};
+
+let currentLang = 'en';
+
+function setLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll('[data-t]').forEach(el => {
+        const key = el.getAttribute('data-t');
+        if (translations[lang][key]) {
+            el.innerHTML = translations[lang][key];
+        }
+    });
+
+    const btnEn = document.getElementById('lang-en');
+    const btnPl = document.getElementById('lang-pl');
+
+    if (lang === 'en') {
+        btnEn.classList.add('text-blue-600', 'bg-blue-50');
+        btnEn.classList.remove('text-slate-400', 'hover:text-slate-600');
+        btnPl.classList.remove('text-blue-600', 'bg-blue-50');
+        btnPl.classList.add('text-slate-400', 'hover:text-slate-600');
+    } else {
+        btnPl.classList.add('text-blue-600', 'bg-blue-50');
+        btnPl.classList.remove('text-slate-400', 'hover:text-slate-600');
+        btnEn.classList.remove('text-blue-600', 'bg-blue-50');
+        btnEn.classList.add('text-slate-400', 'hover:text-slate-600');
+    }
+}
+
+function revealEmail(button) {
+    const emailSpan = button.querySelector('.email-text');
+    if (!emailSpan) return;
+
+    const email = 'contact' + '@' + 'halaczkiewicz.it';
+    const suffix = translations[currentLang].copied || ' (Copied!)';
+
+    emailSpan.textContent = email;
+
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(() => {
+            const originalText = email;
+            emailSpan.textContent = email + suffix;
+            setTimeout(() => {
+                emailSpan.textContent = originalText;
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    } else {
+        const textArea = document.createElement("textarea");
+        textArea.value = email;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        textArea.style.top = "0";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            const originalText = email;
+            emailSpan.textContent = email + suffix;
+            setTimeout(() => {
+                emailSpan.textContent = originalText;
+            }, 2000);
+        } catch (err) {
+            console.error('Fallback copy failed', err);
+        }
+        document.body.removeChild(textArea);
+    }
+}
+
+window.addEventListener('DOMContentLoaded', () => setLanguage('en'));
+</script>
