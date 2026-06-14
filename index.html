@@ -41,6 +41,39 @@
             .timeline-line { left: 24px; }
             .timeline-dot { left: 24px; }
         }
+		/* Skills Matrix – mobile optimization */
+@media (max-width: 640px) {
+    #skills table th,
+    #skills table td {
+        padding-left: 0.75rem;   /* mniejszy padding */
+        padding-right: 0.75rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 0.8rem;       /* mniejsza czcionka */
+        white-space: nowrap;     /* nie łamie tekstu */
+    }
+
+    #skills table {
+        width: 100%;             /* tabela dopasowana do ekranu */
+        table-layout: fixed;     /* kolumny równiej rozłożone */
+    }
+
+    #skills th:nth-child(1),
+    #skills td:nth-child(1) {
+        width: 40%;              /* Skill */
+    }
+
+    #skills th:nth-child(2),
+    #skills td:nth-child(2) {
+        width: 30%;              /* Level */
+    }
+
+    #skills th:nth-child(3),
+    #skills td:nth-child(3) {
+        width: 30%;              /* Experience */
+    }
+}
+
     </style>
 
     <!-- Schema.org Person -->
@@ -154,7 +187,10 @@
             <td class="px-6 py-4 text-slate-600">3+ years</td>
           </tr>
           <tr>
-            <td class="px-6 py-4 text-slate-800">Datadog / Observability</td>
+            <td class="px-6 py-4 text-slate-800">
+    <span class="hidden sm:inline">Datadog / Observability</span>
+    <span class="inline sm:hidden">Datadog</span>
+</td>
             <td class="px-6 py-4 text-blue-600 font-semibold">Advanced</td>
             <td class="px-6 py-4 text-slate-600">2+ years</td>
           </tr>
