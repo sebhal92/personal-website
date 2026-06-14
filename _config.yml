@@ -28,4 +28,3 @@ include:
 # Future-proof settings
 kramdown:
   input: GFM
-# rebuild
