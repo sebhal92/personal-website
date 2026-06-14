@@ -1,0 +1,30 @@
+title: "Platform Operations & Infrastructure Engineer – Sebastian Hałaczkiewicz"
+description: "Platform Operations & Infrastructure Engineer specializing in Azure, Datadog, Windows Server, Active Directory, VMware, networking and enterprise infrastructure."
+url: "https://halaczkiewicz.it"
+
+# GitHub Pages – disable default theme
+theme: null
+
+# Markdown engine
+markdown: kramdown
+
+# Permalinks (optional, but clean)
+permalink: pretty
+
+# Exclude files that should NOT be processed by Jekyll
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - package.json
+  - package-lock.json
+
+# Include assets folder
+include:
+  - assets
+
+# Future-proof settings
+kramdown:
+  input: GFM

@@ -1,0 +1,88 @@
+<!-- Required meta -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Primary metadata -->
+<title>{{ site.title }}</title>
+<meta name="description" content="Platform Operations & Infrastructure Engineer specializing in Azure, Datadog, Windows Server, Active Directory, VMware, networking and enterprise infrastructure. Experience in cloud operations, monitoring, incident management and OT/industrial systems." />
+<link rel="canonical" href="{{ site.url }}" />
+<meta name="theme-color" content="#2563eb" />
+
+<!-- OpenGraph -->
+<meta property="og:title" content="Platform Operations & Infrastructure Engineer – Sebastian Hałaczkiewicz">
+<meta property="og:description" content="Azure • Datadog • Windows Server • Active Directory • VMware • Cloud Operations">
+<meta property="og:url" content="{{ site.url }}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{ site.url }}/preview.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Geist:wght@400;500&display=swap" as="style">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Geist:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<!-- Styles -->
+<style>
+    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; scroll-behavior: smooth; }
+    .timeline-line { position: absolute; left: 50%; width: 2px; height: 100%; background-color: #e2e8f0; transform: translateX(-50%); }
+    .timeline-dot { position: absolute; left: 50%; width: 12px; height: 12px; background-color: #3b82f6; border: 2px solid #fff; border-radius: 50%; transform: translateX(-50%); z-index: 10; }
+    .expertise-card { transition: transform 0.2s; }
+    .expertise-card:hover { transform: translateY(-4px); }
+    @media (max-width: 768px) {
+        .timeline-line { left: 24px; }
+        .timeline-dot { left: 24px; }
+    }
+
+    /* Skills Matrix – mobile optimization */
+    @media (max-width: 640px) {
+        #skills table th,
+        #skills table td {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            font-size: 0.8rem;
+            white-space: nowrap;
+        }
+
+        #skills table {
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        #skills th:nth-child(1),
+        #skills td:nth-child(1) {
+            width: 40%;
+        }
+
+        #skills th:nth-child(2),
+        #skills td:nth-child(2) {
+            width: 30%;
+        }
+
+        #skills th:nth-child(3),
+        #skills td:nth-child(3) {
+            width: 30%;
+        }
+    }
+</style>
+
+<!-- Schema.org Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sebastian Hałaczkiewicz",
+  "jobTitle": "Platform Operations & Infrastructure Engineer",
+  "url": "https://halaczkiewicz.it",
+  "sameAs": [
+    "https://www.linkedin.com/in/sebastianhalaczkiewicz/"
+  ]
+}
+</script>
