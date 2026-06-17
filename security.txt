@@ -1,0 +1,6 @@
+Contact: mailto:contact@halaczkiewicz.it
+Preferred-Languages: en, pl
+Canonical: https://halaczkiewicz.it/security.txt
+Policy: https://halaczkiewicz.it
+Hiring: https://halaczkiewicz.it
+Expires: 2036-06-17T00:00:00Z
