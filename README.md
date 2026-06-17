@@ -26,33 +26,6 @@ The website is built using:
 - **Custom SVG favicon**
 - **Two‑language support (EN/PL)** via lightweight JS translations
 
----
-
-## 📁 Project Structure
-
-_includes/
-head.html
-nav.html
-hero.html
-expertise.html
-skills.html
-experience.html
-contact.html
-footer.html
-scripts.html
-
-_layouts/
-default.html
-
-assets/
-favicon.svg
-
-index.md
-_config.yml
-README.md
-
----
-
 ## 🚀 Deployment
 
 The site is automatically deployed using **GitHub Pages**.  
