@@ -1,1 +1,15 @@
-manifest.webmanifest
+{
+  "name": "Sebastian Hałaczkiewicz",
+  "short_name": "SH",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2563eb",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ]
+}
