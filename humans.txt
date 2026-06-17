@@ -1,1 +1,13 @@
-humans.txt
+/* TEAM */
+Developer: Sebastian Hałaczkiewicz
+Role: Platform Operations & Infrastructure Engineer
+Location: Wrocław, Poland
+Website: https://halaczkiewicz.it
+
+/* TECHNOLOGY */
+Stack: HTML, Tailwind CSS, Jekyll, GitHub Pages
+Hosting: GitHub Pages
+Tools: VS Code, Git, Linux, Azure
+
+/* THANKS */
+Thanks to the open-source community.
