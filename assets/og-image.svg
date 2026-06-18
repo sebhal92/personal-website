@@ -1,158 +1,63 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Tło: gradient w stylu Tailwind blue -->
-    <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1e40af"/>
+    <!-- Gradient tła -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
       <stop offset="100%" stop-color="#2563eb"/>
     </linearGradient>
 
-    <!-- Delikatny wzór siatki w tle -->
-    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148, 163, 184, 0.25)" stroke-width="1"/>
+    <!-- Grid -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
     </pattern>
 
-    <!-- Cień pod kartą -->
-    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="rgba(15,23,42,0.45)"/>
+    <!-- Cień karty -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="rgba(0,0,0,0.45)"/>
     </filter>
   </defs>
 
   <!-- Tło -->
-  <rect width="1200" height="630" fill="url(#bgGradient)"/>
-  <rect width="1200" height="630" fill="url(#grid)" opacity="0.25"/>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.35"/>
 
-  <!-- Główna karta -->
-  <g filter="url(#cardShadow)">
+  <!-- Karta -->
+  <g filter="url(#shadow)">
     <rect x="120" y="90" width="960" height="450" rx="32" fill="#0f172a" opacity="0.96"/>
   </g>
 
-  <!-- Lewa kolumna: tytuł + imię -->
+  <!-- Lewa kolumna -->
   <g transform="translate(170, 160)">
     <!-- Label -->
-    <rect x="0" y="-32" rx="999" ry="999" width="260" height="28" fill="rgba(37,99,235,0.18)" />
-    <text x="18" y="-13"
-          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-          font-size="13"
-          fill="#bfdbfe"
-          letter-spacing="0.16em"
-          textLength="220">
+    <rect x="0" y="-28" width="300" height="26" rx="999" fill="rgba(37,99,235,0.2)"/>
+    <text x="20" y="-10" font-family="Inter, sans-serif" font-size="13" fill="#bfdbfe" letter-spacing="0.18em">
       PLATFORM OPERATIONS
     </text>
 
-    <!-- Główny tytuł -->
-    <text x="0" y="32"
-          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-          font-size="40"
-          font-weight="700"
-          fill="#e5f0ff">
+    <!-- Tytuł -->
+    <text x="0" y="40" font-family="Inter, sans-serif" font-size="42" font-weight="700" fill="#e2e8f0">
       Platform Operations Engineer
     </text>
 
-    <!-- Imię i nazwisko -->
-    <text x="0" y="82"
-          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-          font-size="26"
-          font-weight="600"
-          fill="#bfdbfe">
+    <!-- Imię -->
+    <text x="0" y="90" font-family="Inter, sans-serif" font-size="28" font-weight="600" fill="#bfdbfe">
       Sebastian Hałaczkiewicz
     </text>
 
-    <!-- Podtytuł / tagline -->
-    <text x="0" y="122"
-          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-          font-size="16"
-          fill="#9ca3af">
+    <!-- Podtytuł -->
+    <text x="0" y="130" font-family="Inter, sans-serif" font-size="17" fill="#94a3b8">
       Azure • Datadog • Windows Server • Active Directory • VMware • Cloud Operations
     </text>
   </g>
 
-  <!-- Prawa kolumna: „stack” + CTA -->
+  <!-- Prawa kolumna -->
   <g transform="translate(700, 170)">
-    <!-- Sekcja „Core stack” -->
-    <text x="0" y="0"
-          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-          font-size="13"
-          fill="#9ca3af"
-          letter-spacing="0.18em">
+    <!-- Nagłówek -->
+    <text x="0" y="0" font-family="Inter, sans-serif" font-size="13" fill="#94a3b8" letter-spacing="0.18em">
       CORE STACK
     </text>
 
-    <!-- Ikony / „pigułki” technologii -->
+    <!-- Pigułki technologii -->
     <g transform="translate(0, 26)">
       <!-- Azure -->
-      <rect x="0" y="0" rx="999" ry="999" width="150" height="32" fill="rgba(15,23,42,0.9)" stroke="#1d4ed8" stroke-width="1"/>
-      <circle cx="18" cy="16" r="6" fill="#60a5fa"/>
-      <text x="34" y="20"
-            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-            font-size="14"
-            fill="#e5e7eb">
-        Azure
-      </text>
-
-      <!-- Datadog -->
-      <rect x="170" y="0" rx="999" ry="999" width="150" height="32" fill="rgba(15,23,42,0.9)" stroke="#7c3aed" stroke-width="1"/>
-      <circle cx="188" cy="16" r="6" fill="#a855f7"/>
-      <text x="204" y="20"
-            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-            font-size="14"
-            fill="#e5e7eb">
-        Datadog
-      </text>
-
-      <!-- Windows Server -->
-      <rect x="0" y="44" rx="999" ry="999" width="190" height="32" fill="rgba(15,23,42,0.9)" stroke="#0ea5e9" stroke-width="1"/>
-      <rect x="14" y="52" width="12" height="12" fill="#38bdf8"/>
-      <rect x="30" y="52" width="12" height="12" fill="#0ea5e9"/>
-      <text x="50" y="72"
-            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-            font-size="14"
-            fill="#e5e7eb">
-        Windows Server
-      </text>
-
-      <!-- VMware -->
-      <rect x="210" y="44" rx="999" ry="999" width="140" height="32" fill="rgba(15,23,42,0.9)" stroke="#22c55e" stroke-width="1"/>
-      <rect x="224" y="52" width="10" height="10" fill="#22c55e"/>
-      <rect x="234" y="56" width="10" height="10" fill="#4ade80"/>
-      <text x="252" y="72"
-            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-            font-size="14"
-            fill="#e5e7eb">
-        VMware
-      </text>
-    </g>
-
-    <!-- CTA -->
-    <g transform="translate(0, 120)">
-      <!-- Przycisk -->
-      <rect x="0" y="0" rx="999" ry="999" width="210" height="44" fill="#facc15"/>
-      <text x="24" y="28"
-            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-            font-size="16"
-            font-weight="600"
-            fill="#1f2937">
-        LET’S CONNECT →
-      </text>
-
-      <!-- URL pod spodem -->
-      <text x="4" y="74"
-            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-            font-size="14"
-            fill="#9ca3af">
-        halaczkiewicz.it
-      </text>
-    </g>
-  </g>
-
-  <!-- Delikatny „badge” w prawym górnym rogu karty -->
-  <g transform="translate(960, 120)">
-    <rect x="0" y="0" rx="999" ry="999" width="110" height="28" fill="rgba(15,23,42,0.9)" stroke="rgba(148,163,184,0.6)" stroke-width="1"/>
-    <circle cx="18" cy="14" r="5" fill="#22c55e"/>
-    <text x="30" y="18"
-          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-          font-size="12"
-          fill="#e5e7eb">
-      AVAILABLE
-    </text>
-  </g>
-</svg>
+      <rect x="0" y="0" width="150" height="34" rx="999" fill="rgba(255,255,255,0.05)" stroke="#3b82f6" stroke-width="1"/>
