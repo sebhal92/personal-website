@@ -28,3 +28,15 @@ include:
 # Future-proof settings
 kramdown:
   input: GFM
+
+# Performance optimizations (Krok 4.4)
+plugins:
+  - jekyll-minifier
+
+jekyll-minifier:
+  remove_comments: true
+  remove_intertag_spaces: true
+  collapse_whitespace: true
+  remove_quotes: true
+  compress_css: true
+  compress_javascript: true
