@@ -1,29 +1,30 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Delikatny biały grid -->
+    <!-- Delikatny grid -->
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M40 0H0V40" fill="none" stroke="rgba(148,163,184,0.15)" stroke-width="1"/>
     </pattern>
 
-    <!-- Cień pod kartą -->
+    <!-- Cień karty -->
     <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="rgba(15,23,42,0.18)"/>
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="rgba(15,23,42,0.16)"/>
     </filter>
   </defs>
 
-  <!-- Tło: białe + delikatny grid -->
+  <!-- Tło -->
   <rect width="1200" height="630" fill="#ffffff"/>
-  <rect width="1200" height="630" fill="url(#grid)" opacity="0.5"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.45"/>
 
   <!-- Centralna karta -->
   <g filter="url(#cardShadow)">
-    <rect x="150" y="110" width="900" height="410" rx="32" fill="#ffffff"/>
+    <rect x="150" y="110" width="900" height="410" rx="24" fill="#ffffff"/>
   </g>
 
   <!-- Lewa część karty -->
-  <g transform="translate(200, 170)">
+  <g transform="translate(200, 175)">
     <!-- Label -->
-    <rect x="0" y="-26" width="260" height="24" rx="999" fill="rgba(37,99,235,0.08)"/>
+    <rect x="0" y="-26" width="260" height="24" rx="999"
+          fill="rgba(37,99,235,0.06)" stroke="#bfdbfe" stroke-width="1"/>
     <text x="20" y="-9"
           font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
           font-size="12"
@@ -35,14 +36,14 @@
     <!-- Tytuł -->
     <text x="0" y="40"
           font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-          font-size="38"
+          font-size="36"
           font-weight="700"
           fill="#0f172a">
       Platform Operations Engineer
     </text>
 
     <!-- Imię i nazwisko -->
-    <text x="0" y="86"
+    <text x="0" y="82"
           font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
           font-size="24"
           font-weight="600"
@@ -51,7 +52,7 @@
     </text>
 
     <!-- Podtytuł -->
-    <text x="0" y="122"
+    <text x="0" y="118"
           font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
           font-size="15"
           fill="#4b5563">
@@ -60,7 +61,7 @@
   </g>
 
   <!-- Prawa część karty -->
-  <g transform="translate(720, 180)">
+  <g transform="translate(720, 185)">
     <!-- Nagłówek sekcji -->
     <text x="0" y="0"
           font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
@@ -70,13 +71,12 @@
       CORE STACK
     </text>
 
-    <!-- Pigułki technologii -->
+    <!-- Pigułki technologii: prostokąty z cienką ramką, rounded-lg -->
     <g transform="translate(0, 24)">
       <!-- Azure -->
-      <rect x="0" y="0" width="150" height="32" rx="999"
-            fill="#f9fafb" stroke="#2563eb" stroke-width="1"/>
-      <circle cx="18" cy="16" r="6" fill="#2563eb"/>
-      <text x="34" y="21"
+      <rect x="0" y="0" width="190" height="32" rx="8"
+            fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+      <text x="16" y="21"
             font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
             font-size="14"
             fill="#111827">
@@ -84,10 +84,9 @@
       </text>
 
       <!-- Datadog -->
-      <rect x="170" y="0" width="150" height="32" rx="999"
-            fill="#f9fafb" stroke="#7c3aed" stroke-width="1"/>
-      <circle cx="188" cy="16" r="6" fill="#7c3aed"/>
-      <text x="204" y="21"
+      <rect x="0" y="44" width="190" height="32" rx="8"
+            fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+      <text x="16" y="65"
             font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
             font-size="14"
             fill="#111827">
@@ -95,11 +94,9 @@
       </text>
 
       <!-- Windows Server -->
-      <rect x="0" y="44" width="190" height="32" rx="999"
-            fill="#f9fafb" stroke="#0ea5e9" stroke-width="1"/>
-      <rect x="14" y="52" width="12" height="12" fill="#38bdf8"/>
-      <rect x="30" y="52" width="12" height="12" fill="#0ea5e9"/>
-      <text x="50" y="71"
+      <rect x="0" y="88" width="190" height="32" rx="8"
+            fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+      <text x="16" y="109"
             font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
             font-size="14"
             fill="#111827">
@@ -107,11 +104,9 @@
       </text>
 
       <!-- VMware -->
-      <rect x="210" y="44" width="150" height="32" rx="999"
-            fill="#f9fafb" stroke="#22c55e" stroke-width="1"/>
-      <rect x="224" y="52" width="10" height="10" fill="#22c55e"/>
-      <rect x="236" y="56" width="10" height="10" fill="#4ade80"/>
-      <text x="252" y="71"
+      <rect x="0" y="132" width="190" height="32" rx="8"
+            fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+      <text x="16" y="153"
             font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
             font-size="14"
             fill="#111827">
@@ -120,7 +115,7 @@
     </g>
 
     <!-- CTA -->
-    <g transform="translate(0, 132)">
+    <g transform="translate(0, 190)">
       <!-- Przycisk -->
       <rect x="0" y="0" width="230" height="46" rx="999" fill="#2563eb"/>
       <text x="26" y="29"
@@ -141,12 +136,11 @@
     </g>
   </g>
 
-  <!-- Mały badge „AVAILABLE” w prawym górnym rogu karty -->
-  <g transform="translate(930, 130)">
+  <!-- Badge AVAILABLE -->
+  <g transform="translate(930, 135)">
     <rect x="0" y="0" width="110" height="26" rx="999"
           fill="#ecfdf3" stroke="#bbf7d0" stroke-width="1"/>
-    <circle cx="18" cy="13" r="5" fill="#22c55e"/>
-    <text x="30" y="17"
+    <text x="20" y="17"
           font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
           font-size="12"
           fill="#166534">
