@@ -189,10 +189,9 @@ setLanguage('en');
 <script defer>
 document.querySelectorAll('a[href^="/"]').forEach(a => {
   a.addEventListener('mouseover', () => {
-    if (!url.startsWith(location.origin)) return;
     const link = document.createElement('link');
     link.rel = 'prefetch';
-    link.href = url;
+    link.href = a.href;
     document.head.appendChild(link);
   });
 });
