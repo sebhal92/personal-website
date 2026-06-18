@@ -1,10 +1,10 @@
 <!-- ========================================================= -->
 <!-- SECURITY HEADERS (HTTP-ONLY — GitHub Pages does not support them) -->
-<!-- Included here for documentation purposes and as feature template.   -->
+<!-- Included here for documentation purposes and as feature template. -->
 <!-- ========================================================= -->
 <!--
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-Content-Security-Policy: default-src 'self'; img-src 'self' data: https:; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; object-src 'none'; frame-ancestors 'none';
+Content-Security-Policy: default-src 'self'; img-src 'self' data: https:; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none';
 X-Content-Type-Options: nosniff
 X-Frame-Options: DENY
 Referrer-Policy: strict-origin-when-cross-origin
@@ -15,7 +15,7 @@ Cross-Origin-Resource-Policy: same-origin
 -->
 
 <!-- ========================================================= -->
-<!-- META SECURITY (partially hosted on GitHub Pages)          -->
+<!-- META SECURITY (partially hosted on GitHub Pages) -->
 <!-- ========================================================= -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -58,30 +58,20 @@ Cross-Origin-Resource-Policy: same-origin
 <link rel="preload" href="/favicon.svg" as="image">
 <link rel="preload" href="/assets/og-image.webp" as="image">
 
-<!-- Fonts (optimized) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Geist:wght@400;500&display=swap"
-      as="style"
-      onload="this.rel='stylesheet'">
-
-<noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Geist:wght@400;500&display=swap" rel="stylesheet">
-</noscript>
-
-<!-- Tailwind -->
+<!-- Tailwind CSS (critical path optimized) -->
 <link rel="preload" href="/assets/css/main.build.css" as="style">
 <link rel="stylesheet" href="/assets/css/main.build.css">
 
 <!-- Styles -->
 <style>
     body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; scroll-behavior: smooth; }
+    img { aspect-ratio: auto; }
+
     .timeline-line { position: absolute; left: 50%; width: 2px; height: 100%; background-color: #e2e8f0; transform: translateX(-50%); }
     .timeline-dot { position: absolute; left: 50%; width: 12px; height: 12px; background-color: #3b82f6; border: 2px solid #fff; border-radius: 50%; transform: translateX(-50%); z-index: 10; }
     .expertise-card { transition: transform 0.2s; }
     .expertise-card:hover { transform: translateY(-4px); }
+
     @media (max-width: 768px) {
         .timeline-line { left: 24px; }
         .timeline-dot { left: 24px; }
@@ -105,19 +95,11 @@ Cross-Origin-Resource-Policy: same-origin
         }
 
         #skills th:nth-child(1),
-        #skills td:nth-child(1) {
-            width: 40%;
-        }
-
+        #skills td:nth-child(1) { width: 40%; }
         #skills th:nth-child(2),
-        #skills td:nth-child(2) {
-            width: 30%;
-        }
-
+        #skills td:nth-child(2) { width: 30%; }
         #skills th:nth-child(3),
-        #skills td:nth-child(3) {
-            width: 30%;
-        }
+        #skills td:nth-child(3) { width: 30%; }
     }
 </style>
 
@@ -146,22 +128,10 @@ Cross-Origin-Resource-Policy: same-origin
     "name": "Etteplan"
   },
   "alumniOf": [
-    {
-      "@type": "Organization",
-      "name": "Nestlé Polska"
-    },
-    {
-      "@type": "Organization",
-      "name": "Credit Agricole Bank Polska"
-    },
-    {
-      "@type": "Organization",
-      "name": "Atos Poland"
-    },
-    {
-      "@type": "Organization",
-      "name": "GR8 Tech"
-    }
+    { "@type": "Organization", "name": "Nestlé Polska" },
+    { "@type": "Organization", "name": "Credit Agricole Bank Polska" },
+    { "@type": "Organization", "name": "Atos Poland" },
+    { "@type": "Organization", "name": "GR8 Tech" }
   ],
   "knowsAbout": [
     "Azure",
