@@ -1,4 +1,4 @@
-<script>
+<script defer>
 const translations = {
     en: {
         "nav-expertise": "Expertise",
@@ -186,7 +186,7 @@ function revealEmail(button) {
 
 window.addEventListener('DOMContentLoaded', () => setLanguage('en'));
 </script>
-<script>
+<script defer>
 document.querySelectorAll('a[href]').forEach(a => {
   a.addEventListener('mouseover', () => {
     const url = a.href;
