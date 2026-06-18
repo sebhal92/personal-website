@@ -186,3 +186,15 @@ function revealEmail(button) {
 
 window.addEventListener('DOMContentLoaded', () => setLanguage('en'));
 </script>
+<script>
+document.querySelectorAll('a[href]').forEach(a => {
+  a.addEventListener('mouseover', () => {
+    const url = a.href;
+    if (!url.startsWith(location.origin)) return;
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
+  });
+});
+</script>
