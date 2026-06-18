@@ -184,10 +184,10 @@ function revealEmail(button) {
     }
 }
 
-window.addEventListener('DOMContentLoaded', () => setLanguage('en'));
+setLanguage('en');
 </script>
 <script defer>
-document.querySelectorAll('a[href]').forEach(a => {
+document.querySelectorAll('a[href^="/"]').forEach(a => {
   a.addEventListener('mouseover', () => {
     const url = a.href;
     if (!url.startsWith(location.origin)) return;
