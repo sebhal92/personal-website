@@ -32,6 +32,7 @@ kramdown:
 # Performance optimizations (Krok 4.4)
 plugins:
   - jekyll-minifier
+  - jekyll-sitemap
 
 jekyll-minifier:
   remove_comments: true
