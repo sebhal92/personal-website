@@ -21,6 +21,9 @@ exclude:
   - node_modules/
   - package.json
   - package-lock.json
+  - robots.txt
+  - security.txt
+  - humans.txt
 
 # Include assets folder
 include:
