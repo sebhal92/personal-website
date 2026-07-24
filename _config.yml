@@ -15,6 +15,7 @@ permalink: pretty
 exclude:
   - README.md
   - LICENSE
+  - CNAME
   - Gemfile
   - Gemfile.lock
   - node_modules/
